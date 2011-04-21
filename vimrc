@@ -45,4 +45,6 @@ set title
 " Start scrolling before reaching bottom
 set scrolloff=3
 
+" Toggle NERDTree with ,d
+map ,d :execute 'NERDTreeToggle ' .getcwd()<CR>
 
