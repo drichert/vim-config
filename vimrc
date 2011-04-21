@@ -48,3 +48,7 @@ set scrolloff=3
 " Toggle NERDTree with ,d
 map ,d :execute 'NERDTreeToggle ' .getcwd()<CR>
 
+" solarzied color scheme
+syntax enable
+set background=dark
+colorscheme solarized
