@@ -36,7 +36,7 @@ filetype on
 filetype plugin on
 filetype indent on
 
-" shwo cursor position
+" show cursor position
 set ruler
 
 " display title
