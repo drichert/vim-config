@@ -1,3 +1,5 @@
+require 'fileutils'
+
 task :default => :install
 
 manifest = %w[vim vimrc] 
@@ -5,16 +7,16 @@ manifest = %w[vim vimrc]
 desc "Set up symlinks and init submodules"
 task :install do
   manifest.each do |f|
-    target, file = "#{Dir.getwd}/#{f}", "~/.#{f}"
+    target, file = "#{Dir.getwd}/#{f}", "#{File.expand_path("~")}/.#{f}"
 
     puts "Linking #{file}"
 
     # Remove existing file or dir
     if File.exists?(file)
       if File.directory?(file)
-        Dir.unlink(file)
+        rm_rf(file)
       else 
-        File.unlink(file)
+        rm(file)
       end     
     end 
 

@@ -1,4 +1,4 @@
-    ln -s ~/proj/vim-config/vim ~/.vim
-    ln -s ~/proj/vim-config/vimrc ~/.vimrc
+Backup existing ~/.vim and ~/.vimrc first!!!
 
-(Adjust path to vim-config as needed)
+  $ cd <vim-config working dir>
+  $ rake
