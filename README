@@ -1,2 +1,0 @@
-ln -s vim-config/vim ~/.vim
-ln -s vim-config/vimrc ~/.vimrc
