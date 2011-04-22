@@ -21,9 +21,9 @@ task :install do
     end 
 
     File.symlink(target, file) 
-
-    Rake::Task[:init_submodules].invoke
   end  
+
+  Rake::Task[:init_submodules].invoke
 end
 
 desc "Pull submodules"
