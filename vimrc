@@ -22,10 +22,6 @@ nnoremap ` '
 
 set history=2000
 
-" Active NERDTree @ startup dr04212010
-"autocmd VimEnter * NERDTree
-"autocmd VimEnter * wincmd p
-
 " Set pasttoggle so as not to screw up
 " indents on text pasted from another app
 set pastetoggle=<F2>
