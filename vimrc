@@ -41,8 +41,14 @@ set title
 " Start scrolling before reaching bottom
 set scrolloff=3
 
-" Toggle NERDTree with ,d
-map ,d :execute 'NERDTreeToggle ' .getcwd()<CR>
+" Toggle NERDTree
+map <Leader>d :execute 'NERDTreeToggle ' .getcwd()<CR>
+
+" Alignment shortcuts (via tabular.vim)
+nmap <Leader>a= :Tabularize /=<CR>
+vmap <Leader>a= :Tabularize /=<CR>
+nmap <Leader>a: :Tabularize /:\zs<CR>
+vmap <Leader>a: :Tabularize /:\zs<CR>
 
 " solarzied color scheme
 syntax enable
