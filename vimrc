@@ -50,6 +50,9 @@ vmap <Leader>a= :Tabularize /=<CR>
 nmap <Leader>a: :Tabularize /:\zs<CR>
 vmap <Leader>a: :Tabularize /:\zs<CR>
 
+" Ack search
+map <Leader>f :Ack<space>
+
 " solarzied color scheme
 syntax enable
 set background=dark
