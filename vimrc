@@ -1,6 +1,7 @@
 " Load pathogen
 call pathogen#runtime_append_all_bundles()
 
+" Filetype highlighting and config.
 filetype plugin indent on
 
 " Auto-indent
@@ -26,12 +27,6 @@ set history=2000
 " indents on text pasted from another app
 set pastetoggle=<F2>
 
-" Filetype highlighting and config.
-syntax on
-filetype on
-filetype plugin on
-filetype indent on
-
 " show cursor position
 set ruler
 
@@ -54,6 +49,6 @@ vmap <Leader>a: :Tabularize /:\zs<CR>
 map <Leader>f :Ack<space>
 
 " solarzied color scheme
-syntax enable
+syntax on
 set background=dark
 colorscheme solarized
