@@ -14,6 +14,7 @@ set shiftwidth=2
 
 " set cinkeys=0{,0},:,0#
 set cinkeys=0{,0},0#
+
 " set mapleader to , instead of \
 let mapleader = "," 
 
@@ -47,6 +48,12 @@ vmap <Leader>a: :Tabularize /:\zs<CR>
 
 " Ack search
 map <Leader>f :Ack<space>
+
+" Remap code completion to Ctrl+Space and use j/k to scroll down/up.
+inoremap <Nul> <C-x><C-o>
+inoremap <expr> j    pumvisible() ? "\<C-n>" : "j"
+inoremap <expr> k    pumvisible() ? "\<C-p>" : "k"
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 
 " solarzied color scheme
 syntax on
