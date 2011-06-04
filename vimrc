@@ -1,8 +1,12 @@
 " Load pathogen
+call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
 " Filetype highlighting and config.
 filetype plugin indent on
+
+" No vi compat
+set nocompatible 
 
 " Auto-indent
 set cindent
