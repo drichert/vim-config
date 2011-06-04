@@ -16,7 +16,7 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 
-" set cinkeys=0{,0},:,0#
+" Reindent triggering keys
 set cinkeys=0{,0},0#
 
 " set mapleader to , instead of \
