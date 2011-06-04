@@ -16,9 +16,9 @@
 [submodule "vim/bundle/gist-vim"]
 	path = vim/bundle/gist-vim
 	url = https://github.com/mattn/gist-vim.git
-[submodule "vim/vim-rails"]
-	path = vim/vim-rails
-	url = https://github.com/tpope/vim-rails.git
-[submodule "vim/vim-fugitive"]
-	path = vim/vim-fugitive
+[submodule "vim/bundle/vim-fugitive"]
+	path = vim/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+[submodule "vim/bundle/vim-rails"]
+	path = vim/bundle/vim-rails
+	url = https://github.com/tpope/vim-rails.git
