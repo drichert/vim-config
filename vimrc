@@ -63,3 +63,11 @@ inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 syntax on
 set background=dark
 colorscheme solarized
+
+" Strip trailing whitespace before saving
+" Markdown uses trailing whitespace, so don't do it if we're editing
+" markdown
+autocmd BufWritePre *
+  \ if &ft !~# '^\%(markdown\|liquid\)$' |
+  \   :%s/\s\+$//e |
+  \ endif
