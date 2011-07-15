@@ -6,7 +6,7 @@ call pathogen#runtime_append_all_bundles()
 filetype plugin indent on
 
 " No vi compat
-set nocompatible 
+set nocompatible
 
 " Auto-indent
 set cindent
@@ -15,12 +15,13 @@ set autoindent
 set expandtab
 set tabstop=2
 set shiftwidth=2
+set backspace=2
 
 " Reindent triggering keys
 set cinkeys=0{,0},0#
 
 " set mapleader to , instead of \
-let mapleader = "," 
+let mapleader = ","
 
 " swap ` and '; makes ' jump to line *and* column
 nnoremap ' `
