@@ -69,6 +69,6 @@ colorscheme solarized
 " Markdown uses trailing whitespace, so don't do it if we're editing
 " markdown
 autocmd BufWritePre *
-  \ if &ft !~# '^\%(markdown\|liquid\)$' |
+  \ if &ft !~# '^\%(md\|markdown\|liquid\)$' |
   \   :%s/\s\+$//e |
   \ endif
