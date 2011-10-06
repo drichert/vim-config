@@ -32,10 +32,13 @@ task :init_submodules do
   `git submodule init && git submodule update`
 end
 
+
+scvim_dir = File.join vim_config_root, *%w{vim bundle scvim}
+
 desc "Set up scvim bin/ symlinks"
 task :symlink_scvim_bin do
   bin_dir       = File.join ENV['HOME'], "local", "bin"
-  scvim_bin_dir = File.join vim_config_root, *%w{vim bundle scvim bin}
+  scvim_bin_dir = File.join scvim_dir, 'bin'
 
   if File.exist? bin_dir
     Dir.glob(File.join(scvim_bin_dir, '*')).each do |f|
@@ -51,5 +54,12 @@ task :symlink_scvim_bin do
     end
   else
     raise Exception, "#{bin_dir} does not exist. Create directory or edit location."
+  end
+end
+
+desc "Symlink ~/.scvimrc"
+task :symlink_scvimrc do
+  unless File.exist? File.join(ENV['HOME'], '.scvimrc')
+    File.symlink File.join(scvim_dir, 'scvimrc'), File.join(ENV['HOME'], '.scvimrc')
   end
 end
