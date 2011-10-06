@@ -63,3 +63,22 @@ task :symlink_scvimrc do
     File.symlink File.join(scvim_dir, 'scvimrc'), File.join(ENV['HOME'], '.scvimrc')
   end
 end
+
+desc "Source scvim class in ~/.sclang.cfg"
+task :source_scvim do
+  sclang_cfg      = File.join ENV['HOME'], '.sclang.cfg'
+  scvim_class_dir = File.join scvim_dir, 'scclasses'
+
+  f = File.open sclang_cfg, "r+"
+
+  f.each_line {|ln|
+    if ln =~ /\+#{Regexp.escape scvim_class_dir}/
+      puts "scvim SuperCollider class already set to be sourced. Skipped."
+      next
+    end
+  }
+
+  f.write "+#{scvim_class_dir}\n"
+  f.close
+end
+
