@@ -34,7 +34,7 @@ endif
 "let g:sclangPipeApp = "/usr/local/bin/sclangpipe_app"
 
 "this indicates the location to create a pipe for vim to communicate with
-"sclang 
+"sclang
 "defaults /tmp/sclang-pipe
 "let g:sclangPipeLoc = "/tmp/sclang-pipe"
 
@@ -76,7 +76,7 @@ au Filetype supercollider,supercollider_help nmap <buffer> <F7> :call SClang_Tem
 au Filetype supercollider,supercollider_help imap <buffer> <F7> :call SClang_TempoClock_clear()<CR>a
 au Filetype supercollider,supercollider_help nmap <buffer> <F8> :call SClang_free("s")<CR>
 au Filetype supercollider,supercollider_help imap <buffer> <F8> :call SClang_free("s")<CR>a
-au Filetype supercollider,supercollider_help nmap <buffer> <F12> :call SClang_thisProcess_stop()<CR>
-au Filetype supercollider,supercollider_help imap <buffer> <F12> :call SClang_thisProcess_stop()<CR>a
+au Filetype supercollider,supercollider_help nmap <buffer> <F9> :call SClang_thisProcess_stop()<CR>
+au Filetype supercollider,supercollider_help imap <buffer> <F9> :call SClang_thisProcess_stop()<CR>a
 
 "end of scvim (supercollider vim)
