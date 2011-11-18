@@ -25,6 +25,3 @@
 [submodule "vim/bundle/vim-ruby"]
 	path = vim/bundle/vim-ruby
 	url = https://github.com/vim-ruby/vim-ruby.git
-[submodule "vim/bundle/scvim"]
-	path = vim/bundle/scvim
-	url = https://github.com/sbl/scvim.git
