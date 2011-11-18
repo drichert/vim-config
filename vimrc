@@ -72,3 +72,8 @@ autocmd BufWritePre *
   \ if &ft !~# '^\%(md\|markdown\|liquid\)$' |
   \   :%s/\s\+$//e |
   \ endif
+
+" Tabz
+nmap <Leader>t  :tabnew<CR>
+nmap <Leader>tn :tabn<CR>
+nmap <Leader>tp :tabp<CR>
