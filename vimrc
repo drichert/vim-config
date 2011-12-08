@@ -77,3 +77,6 @@ autocmd BufWritePre *
 nmap <Leader>t  :tabnew<CR>
 nmap <Leader>tn :tabn<CR>
 nmap <Leader>tp :tabp<CR>
+
+" Toggle line numbers
+nmap <Leader>n :set invnumber<CR>
