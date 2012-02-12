@@ -1,6 +1,5 @@
 " Load pathogen
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 
 " Filetype highlighting and config.
 filetype plugin indent on
@@ -63,6 +62,7 @@ inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 " solarzied color scheme
 syntax on
 set background=dark
+set t_Co=16
 colorscheme solarized
 
 " Strip trailing whitespace before saving
