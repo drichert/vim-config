@@ -25,6 +25,9 @@ let mapleader = ","
 " swap ` and '; makes ' jump to line *and* column
 nnoremap ' `
 nnoremap ` '
+" swap single-quote and double-quote
+inoremap ' "
+inoremap " '
 
 set history=2000
 
