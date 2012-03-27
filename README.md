@@ -1,4 +1,6 @@
-Backup existing ~/.vim and ~/.vimrc first!!!
+vim-config
+==========
 
-    $ cd <vim-config working dir>
-    $ rake
+Be sure to back up existing ~/.vim and ~/.vimrc 
+
+    $ cd <vim-config working dir> && rake
