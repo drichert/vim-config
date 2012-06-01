@@ -20,7 +20,6 @@ set backspace=2
 " Add .god for syntax highlighting
 autocmd BufNewFile,BufRead *.god set filetype=ruby
 
-
 " Reindent triggering keys
 set cinkeys=0{,0},0#
 
@@ -65,12 +64,9 @@ inoremap <expr> k    pumvisible() ? "\<C-p>" : "k"
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 
 " solarzied color scheme
-
-
 set background=dark
 set t_Co=16
 colorscheme solarized
-
 
 " Strip trailing whitespace before saving
 " Markdown uses trailing whitespace, so don't do it if we're editing
