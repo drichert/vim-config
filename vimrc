@@ -1,12 +1,13 @@
+" No vi compat
+set nocompatible
+
 " Load pathogen
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
-" Filetype highlighting and config.
-filetype plugin indent on
+syntax on
 
-" No vi compat
-set nocompatible
+filetype plugin indent on
 
 " Auto-indent
 set cindent
@@ -16,6 +17,10 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set backspace=2
+
+" Add .god for syntax highlighting
+autocmd BufNewFile,BufRead *.god set filetype=ruby
+
 
 " Reindent triggering keys
 set cinkeys=0{,0},0#
@@ -61,9 +66,11 @@ inoremap <expr> k    pumvisible() ? "\<C-p>" : "k"
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 
 " solarzied color scheme
-syntax on
+
+
 set background=dark
 colorscheme solarized
+
 
 " Strip trailing whitespace before saving
 " Markdown uses trailing whitespace, so don't do it if we're editing
