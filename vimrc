@@ -2,8 +2,7 @@
 set nocompatible
 
 " Load pathogen
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 
 syntax on
 
@@ -69,6 +68,7 @@ inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 
 
 set background=dark
+set t_Co=16
 colorscheme solarized
 
 
