@@ -68,13 +68,9 @@ set background=dark
 set t_Co=16
 colorscheme solarized
 
-" Strip trailing whitespace before saving
-" Markdown uses trailing whitespace, so don't do it if we're editing
-" markdown
-autocmd BufWritePre *
-  \ if &ft !~# '^\%(md\|markdown\|liquid\)$' |
-  \   :%s/\s\+$//e |
-  \ endif
+" Strip trailing whitespace
+let g:StripperNoStripOnSave = 1
+nmap <Leader>w :Stripper<CR>
 
 " Tabz
 nmap <Leader>t  :tabnew<CR>
