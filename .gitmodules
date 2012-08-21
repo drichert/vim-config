@@ -31,3 +31,6 @@
 [submodule "vim/bundle/vim-stripper"]
 	path = vim/bundle/vim-stripper
 	url = https://github.com/itspriddle/vim-stripper.git
+[submodule "vim/bundle/vim-taglist"]
+	path = vim/bundle/vim-taglist
+	url = https://github.com/vim-scripts/taglist.vim.git
