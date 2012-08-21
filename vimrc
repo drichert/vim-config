@@ -17,6 +17,9 @@ set tabstop=2
 set shiftwidth=2
 set backspace=2
 
+" 4 space indents for PHP
+autocmd FileType php set shiftwidth=4 tabstop=4
+
 " Add .god for syntax highlighting
 autocmd BufNewFile,BufRead *.god set filetype=ruby
 
