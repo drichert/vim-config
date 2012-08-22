@@ -29,6 +29,13 @@ set cinkeys=0{,0},0#
 " set mapleader to , instead of \
 let mapleader = ","
 
+" Ctags
+map <Leader>ct :!/usr/bin/ctags -R .<CR>
+
+let Tlist_Ctags_Cmd = "/usr/bin/ctags"
+let Tlist_WinWidth = 50
+map <Leader>g :TlistToggle<CR>
+
 " swap ` and '; makes ' jump to line *and* column
 nnoremap ' `
 nnoremap ` '
