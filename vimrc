@@ -89,3 +89,6 @@ nmap <Leader>tp :tabp<CR>
 
 " Toggle line numbers
 nmap <Leader>n :set invnumber<CR>
+
+" Toggle ZoomWin
+nmap <Leader><Leader> :ZoomWin<CR>
