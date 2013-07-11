@@ -1,4 +1,4 @@
-task default: :install
+task(:default => :install)
 
 manifest        = %w[vim vimrc]
 vim_config_root = File.dirname(__FILE__)
