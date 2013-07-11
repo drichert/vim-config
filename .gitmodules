@@ -40,9 +40,6 @@
 [submodule "vim/bundle/hexman.vim"]
 	path = vim/bundle/hexman.vim
 	url = https://github.com/vim-scripts/hexman.vim.git
-[submodule "vim/bundle/scvim"]
-	path = vim/bundle/scvim
-	url = https://github.com/sbl/scvim.git
 [submodule "vim/bundle/vim-origami"]
 	path = vim/bundle/vim-origami
 	url = https://github.com/kshenoy/vim-origami.git
