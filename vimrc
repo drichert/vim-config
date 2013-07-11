@@ -20,6 +20,16 @@ set backspace=2
 " Add .god for syntax highlighting
 autocmd BufNewFile,BufRead *.god set filetype=ruby
 
+" Window movement
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
+
+" Line movement
+nnoremap J j10
+nnoremap K k10
+
 " Reindent triggering keys
 set cinkeys=0{,0},0#
 
