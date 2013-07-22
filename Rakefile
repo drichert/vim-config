@@ -1,30 +1,28 @@
-task(:default => :install)
+include FileUtils::Verbose
 
-manifest        = %w[vim vimrc]
-vim_config_root = File.dirname(__FILE__)
+root = File.dirname(__FILE__)
 
-desc "Set up symlinks and init submodules"
-task :install do
-  manifest.each do |f|
-    target, file = "#{Dir.getwd}/#{f}", "#{File.expand_path("~")}/.#{f}"
+task(default: :install)
 
-    puts "Linking #{file}"
+desc "Install Vim config"
+task(install: [:create_symlinks, :init_submodules, :update_submodules])
 
-    # Remove existing file or dir
-    if File.exists?(file)
-      if File.directory?(file)
-        rm_rf(file)
-      else
-        rm(file)
-      end
-    end
+desc "Create symlinks for vim/ and vimrc"
+task :create_symlinks do
+  home = ENV["HOME"]
 
-    File.symlink(target, file)
+  %w{vim vimrc}.each do |f|
+    rm_rf("#{home}/.#{f}")
+    ln_s("#{root}/#{f}", "#{home}/.#{f}")
   end
-  Rake::Task[:init_submodules].invoke
 end
 
-desc "Pull submodules"
+desc "Update all submodules"
+task :update_submodules do
+  system("git submodule foreach 'git checkout -q master && git pull'")
+end
+
+desc "Init  submodules"
 task :init_submodules do
-  `git submodule init && git submodule update`
+  system("git submodule init")
 end
