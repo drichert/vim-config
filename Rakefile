@@ -25,6 +25,7 @@ end
 desc "Update all submodules"
 task :update_submodules do
   system("git submodule foreach 'git checkout -q master && git pull'")
+  system("git submodule update")
 end
 
 desc "Init  submodules"
