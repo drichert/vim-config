@@ -1,6 +1,15 @@
-vim-config
-==========
+## vim-config
 
-Be sure to back up existing ~/.vim and ~/.vimrc 
+My Vim configuration
 
-    $ cd <vim-config working dir> && rake
+#### Back up existing Vim config
+
+```
+$ rake backup
+```
+
+#### Install
+
+```
+$ rake install
+```
