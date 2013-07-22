@@ -9,9 +9,8 @@ syntax on
 filetype plugin indent on
 
 " Auto-indent
-set cindent
-set smartindent
 set autoindent
+set smartindent
 set expandtab
 set tabstop=2
 set shiftwidth=2
@@ -26,12 +25,15 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 
+" Window movement (insert mode)
+inoremap <c-h> <esc><c-w>hi
+inoremap <c-j> <esc><c-w>ji
+inoremap <c-k> <esc><c-w>ki
+inoremap <c-l> <esc><c-w>li
+
 " Line movement
 nnoremap J j10
 nnoremap K k10
-
-" Reindent triggering keys
-set cinkeys=0{,0},0#
 
 " set mapleader to , instead of \
 let mapleader = ","
