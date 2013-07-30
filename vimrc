@@ -101,3 +101,6 @@ nmap <Leader>n :set invnumber<CR>
 
 " Toggle ZoomWin
 nmap <Leader><Leader> :ZoomWin<CR>
+
+" Run specs with Rake
+nnoremap <leader>rs :!rake spec<cr>
