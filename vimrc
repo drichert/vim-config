@@ -104,3 +104,6 @@ nmap <Leader><Leader> :ZoomWin<CR>
 
 " Run specs with Rake
 nnoremap <leader>rs :!rake spec<cr>
+
+" Run `cake build`
+nnoremap <leader>cb :!cake build<cr>
