@@ -107,3 +107,14 @@ nnoremap <leader>rs :!rake spec<cr>
 
 " Run `cake build`
 nnoremap <leader>cb :!cake build<cr>
+
+" Togle tab expansion
+nmap <Leader>h :call ExpandTabToggle()<cr>
+function! ExpandTabToggle()
+  if &expandtab
+    setlocal noexpandtab
+  else
+    setlocal expandtab
+  endif
+  echom &expandtab
+endfunction
