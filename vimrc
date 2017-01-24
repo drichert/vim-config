@@ -118,3 +118,6 @@ function! ExpandTabToggle()
   endif
   echom &expandtab
 endfunction
+
+" Disable tab expansion for HLM projects
+autocmd BufNewFile,BufRead ~/work/hlm/* set noexpandtab
