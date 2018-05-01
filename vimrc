@@ -4,7 +4,7 @@ set nocompatible
 " Load pathogen
 call pathogen#infect()
 
-syntax on
+syntax enable
 
 filetype plugin indent on
 
@@ -15,6 +15,15 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set backspace=2
+
+" set mapleader to , instead of \
+let mapleader = ","
+
+" Folding
+set foldmethod=indent
+
+" Turn off PEP-8
+let g:python_recommended_style=0
 
 " Add .god for syntax highlighting
 autocmd BufNewFile,BufRead *.god set filetype=ruby
@@ -34,9 +43,6 @@ inoremap <c-l> <esc><c-w>li
 " Line movement
 nnoremap J j10
 nnoremap K k10
-
-" set mapleader to , instead of \
-let mapleader = ","
 
 " Ctags
 map <Leader>ct :!/usr/bin/ctags -R .<CR>
@@ -91,6 +97,8 @@ colorscheme solarized
 let g:StripperNoStripOnSave = 1
 nmap <Leader>w :Stripper<CR>
 
+nmap <Leader>u :%s/[“”]/"/g<CR>
+
 " Tabz
 nmap <Leader>t  :tabnew<CR>
 nmap <Leader>tn :tabn<CR>
@@ -107,6 +115,9 @@ nnoremap <leader>rs :!rake spec<cr>
 
 " Run `cake build`
 nnoremap <leader>cb :!cake build<cr>
+
+" Hexdump
+nnoremap <leader>x :%!xxd<cr>
 
 " Togle tab expansion
 nmap <Leader>h :call ExpandTabToggle()<cr>
