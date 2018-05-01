@@ -21,6 +21,7 @@ let mapleader = ","
 
 " Folding
 set foldmethod=indent
+autocmd Syntax * normal zR
 
 " Turn off PEP-8
 let g:python_recommended_style=0
