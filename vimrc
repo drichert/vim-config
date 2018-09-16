@@ -13,6 +13,7 @@ set autoindent
 set smartindent
 set expandtab
 set tabstop=2
+set softtabstop=2
 set shiftwidth=2
 set backspace=2
 
@@ -24,7 +25,11 @@ set foldmethod=indent
 autocmd Syntax * normal zR
 
 " Turn off PEP-8
-let g:python_recommended_style=0
+let g:python_recommended_style = 0
+let g:pyindent_open_paren = '&sw'
+let g:pyindent_nested_paren = '&sw'
+let g:pyindent_continue = '&sw'
+"autocmd Filetype python setlocal expandtab tabstop=2 shiftwidth=2
 
 " Add .god for syntax highlighting
 autocmd BufNewFile,BufRead *.god set filetype=ruby
@@ -46,11 +51,11 @@ nnoremap J j10
 nnoremap K k10
 
 " Ctags
-map <Leader>ct :!/usr/bin/ctags -R .<CR>
-
-let Tlist_Ctags_Cmd = "/usr/bin/ctags"
-let Tlist_WinWidth = 50
-map <Leader>g :TlistToggle<CR>
+"map <Leader>ct :!/usr/bin/ctags -R .<CR>
+"
+"let Tlist_Ctags_Cmd = "/usr/bin/ctags"
+"let Tlist_WinWidth = 50
+"map <Leader>g :TlistToggle<CR>
 
 " swap ` and '; makes ' jump to line *and* column
 nnoremap ' `
@@ -84,10 +89,10 @@ vmap <Leader>a: :Tabularize /:\zs<CR>
 map <Leader>f :Ack<space>
 
 " Remap code completion to Ctrl+Space and use j/k to scroll down/up.
-inoremap <Nul> <C-x><C-o>
-inoremap <expr> j    pumvisible() ? "\<C-n>" : "j"
-inoremap <expr> k    pumvisible() ? "\<C-p>" : "k"
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
+" inoremap <Nul> <C-x><C-o>
+" inoremap <expr> j    pumvisible() ? "\<C-n>" : "j"
+" inoremap <expr> k    pumvisible() ? "\<C-p>" : "k"
+" inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 
 " solarzied color scheme
 set background=dark
