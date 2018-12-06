@@ -5,6 +5,7 @@ set nocompatible
 call pathogen#infect()
 
 syntax enable
+syntax sync minlines=10000
 
 filetype plugin indent on
 
